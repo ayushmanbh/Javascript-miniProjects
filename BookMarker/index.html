@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Site Bookmarker</title>
+  </head>
+  <body onload="fetchBookmarks()">
+    <div class="container">
+      <!-- Jumbotron -->
+      <div class="jumbotron p-0">
+        <!-- Card image -->
+        <div class="view overlay rounded-top">
+          <img
+            src="https://mdbootstrap.com/img/Photos/Slides/img%20(134).jpg"
+            class="img-fluid"
+            alt="Sample image"
+          />
+          <a href="#">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body text-center mb-3">
+          <!-- Title -->
+          <h3 class="card-title h3 my-4"><strong>Bookmarker</strong></h3>
+          <!-- Text -->
+          <p class="card-text py-2">
+            Bookmarker is an app that lets you bookmark your favourite sites so
+            that you can easily visit them on the go.
+          </p>
+          <form id="myForm">
+            <div class="form-group">
+              <label for="name">Site Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                aria-describedby="emailHelp"
+                placeholder="Enter site name..."
+              />
+              <small id="nameHelp" class="form-text text-muted"
+                >Think about a cool name for the site.</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="url">Site URL</label>
+              <input
+                type="text"
+                class="form-control"
+                id="url"
+                placeholder="Enter site URL..."
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- Jumbotron -->
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <div id="bookmarksResults"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"
+  ></script>
+</html>
